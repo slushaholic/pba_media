@@ -1,5 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
-
-  "semi"
+    "extends": "next/core-web-vitals",
+    "rules": {
+        "semi": "warn",
+        "indent": ["warn", "tab"]
+    }
 }
