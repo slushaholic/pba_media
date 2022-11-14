@@ -11,21 +11,21 @@ function MyApp({ Component, pageProps }) {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Home</a></li>
-        <li><a>Feed</a></li>
-        <li><a>Messages</a></li>
-        <li><a>About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/feed">Feed</a></li>
+        <li><a href="/directmessage">Messages</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   </div>
   <div className="navbar-center">
-    <a className="btn btn-ghost normal-case text-xl">Hive Media</a>
+    <a className="btn btn-ghost normal-case text-xl" href="/">Hive Media</a>
   </div>
   <div className="navbar-end">
-   <button type="submit" value="Input" class="btn rounded-full"> 
+   <button type="submit" value="Input" class="btn"> 
       Login
    </button>
-   <button class="btn rounded-full mx-1" type="submit" value="Input">
+   <button class="btn mx-1" type="submit" value="Input">
       Sign-Up
    </button>
   </div>
