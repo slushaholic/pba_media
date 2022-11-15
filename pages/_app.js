@@ -22,12 +22,17 @@ function MyApp({ Component, pageProps }) {
     <a className="btn btn-ghost normal-case text-xl" href="/">Hive Media</a>
   </div>
   <div className="navbar-end">
-   <button type="submit" value="Input" class="btn"> 
+  <a href='/login'>
+    <button type="submit" value="Input" class="btn" href="/login">  
       Login
    </button>
-   <button class="btn mx-1" type="submit" value="Input">
+  </a>
+   <a href='/register'>
+    <button class="btn mx-1" type="submit" value="Input">
       Sign-Up
    </button>
+   </a>
+   
   </div>
 </div>
 
