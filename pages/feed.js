@@ -1,7 +1,7 @@
 export default function Feed() {
     return (
         <>
-            <h1>Feed Page</h1>
+            <h1 className='center'>Feed Page</h1>
         </>
     )
 }
