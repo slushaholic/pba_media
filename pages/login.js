@@ -47,7 +47,15 @@ export default function Login() {
             className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
           />
         </form>
+
         <div className="text-center pt-12 pb-12">
+        <div className="col-md-12">
+  {" "}
+  <a
+    className="btn btn-md btn-google btn-block text-center btn-outline"href="#">
+    <img src="https://img.icons8.com/color/16/000000/google-logo.png" /> Login using Google
+    </a>{" "}
+  </div>
           <p>
             Don't have an account?{" "}
             <a href="register" className="underline font-semibold">

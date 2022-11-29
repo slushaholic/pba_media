@@ -3,16 +3,14 @@
 export default function About() {
     return (
    <>
-   <div
-  id="team"
-  className="section relative pt-20 pb-8 md:pt-16 bg-white dark:bg-gray-800"
+   <div id="team" className="section center pt-20 pb-8 md:pt-16 dark:bg-gray-800"
 >
   <div className="container xl:max-w-6xl mx-auto px-4">
     {/* section header */}
     <header className="text-center mx-auto mb-12">
-      <h2 className="text-2xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">
+      <h1 className="text-2xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">
         <span className="font-light">PBA</span> Team
-      </h2>
+      </h1>
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
