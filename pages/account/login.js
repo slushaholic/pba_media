@@ -17,7 +17,7 @@ export default function Login() {
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
-          onsubmit="event.preventDefault();"
+          onsubmit="validateForm();"
         >
           <div className="flex flex-col pt-4">
             <label htmlFor="email" className="text-lg">
@@ -60,4 +60,10 @@ export default function Login() {
   </div>
 </>
     )
+
+}
+
+function validateForm(){
+  const email = document.querySelector('#email').value
+  console.log(email)
 }
