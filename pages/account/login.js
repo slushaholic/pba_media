@@ -1,3 +1,5 @@
+
+
 export default function Login() {
     return ( 
         <>
@@ -17,7 +19,10 @@ export default function Login() {
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
-          onsubmit="validateForm();"
+          onSubmit={() => {
+            const email = document.querySelector('#email').value
+          }
+          }
         >
           <div className="flex flex-col pt-4">
             <label htmlFor="email" className="text-lg">
@@ -47,15 +52,7 @@ export default function Login() {
             className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
           />
         </form>
-
         <div className="text-center pt-12 pb-12">
-        <div className="col-md-12">
-  {" "}
-  <a
-    className="btn btn-md btn-google btn-block text-center btn-outline"href="#">
-    <img src="https://img.icons8.com/color/16/000000/google-logo.png" /> Login using Google
-    </a>{" "}
-  </div>
           <p>
             Don't have an account?{" "}
             <a href="register" className="underline font-semibold">
@@ -71,7 +68,3 @@ export default function Login() {
 
 }
 
-function validateForm(){
-  const email = document.querySelector('#email').value
-  console.log(email)
-}
