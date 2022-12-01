@@ -4,7 +4,7 @@ class SendButton extends Component{
     render(){
       return (<div className="send_message" onClick={this.props.handleClick}>
                 <div className="text text-center">
-                  <button className='btn d-flex'>Send</button>
+                  <button className='btn '>Send</button>
                 </div>
               </div>);
     }
