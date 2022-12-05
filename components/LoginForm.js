@@ -1,6 +1,26 @@
-export default function Login() {
-    return ( 
-        <>
+import React from "react"
+import { loginUser } from '../lib/auth'
+
+class LoginForm extends React.Component {
+    state = {
+        email: '',
+        password: ''
+    }
+
+    handleChange = event => {
+        this.setState({ [event.target.name]: event.target.value })
+    }
+
+    handleSubmit = event => {
+      const { email, password} = this.state
+
+      event.preventDefault()
+      loginUser(email, password)
+    }
+
+    render() {
+        return(
+            <>
         <link
     href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     rel="stylesheet"
@@ -17,7 +37,7 @@ export default function Login() {
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
-          onsubmit="event.preventDefault();"
+          onSubmit={this.handleSubmit}
         >
           <div className="flex flex-col pt-4">
             <label htmlFor="email" className="text-lg">
@@ -26,7 +46,9 @@ export default function Login() {
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="your@email.com"
+              onChange={this.handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -37,7 +59,9 @@ export default function Login() {
             <input
               type="password"
               id="password"
+              name="password"
               placeholder="Password"
+              onChange={this.handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -47,15 +71,7 @@ export default function Login() {
             className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
           />
         </form>
-
         <div className="text-center pt-12 pb-12">
-        <div className="col-md-12">
-  {" "}
-  <a
-    className="btn btn-md btn-google btn-block text-center btn-outline"href="#">
-    <img src="https://img.icons8.com/color/16/000000/google-logo.png" /> Login using Google
-    </a>{" "}
-  </div>
           <p>
             Don't have an account?{" "}
             <a href="register" className="underline font-semibold">
@@ -67,5 +83,8 @@ export default function Login() {
     </div>
   </div>
 </>
-    )
+        )
+    }
 }
+
+export default LoginForm
