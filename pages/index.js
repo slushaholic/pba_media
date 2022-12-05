@@ -1,20 +1,29 @@
 import Head from 'next/head'
 import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
-
+import Link from 'next/link'
+import Card from '../components/Card'
+import SendPost from '../components/SendPost'
+import RecivedPost from '../components/RecivedPost'
 export default function Home() {
   return (
-    <>
-  <div className="card w-96 bg-base-100 shadow-xl">
-    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-    <div className="card-body">
-      <h2 className="card-title">Shoes!</h2>
-      <p>If a dog chews shoes whose shoes does he choose?</p>
-      <div className="card-actions justify-end">
-        <button className="btn btn-primary">Buy Now</button>
+    <div className='container grow'>
+       <div className='flex justify-center items-center'>
+        <div className='w-3/4 ml-64'>
+          <Card>
+            <SendPost />
+          </Card>
+        </div>
+    </div>
+    <div className='flex justify-center items-center my-5'>
+      <div className='w-3/4 ml-64'>
+        <Card>
+          <RecivedPost />
+        </Card>
       </div>
     </div>
   </div>
-  </>
+   
+      
+   
   )
 }
