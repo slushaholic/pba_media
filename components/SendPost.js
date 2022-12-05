@@ -10,7 +10,7 @@ export default function SendPost() {
                     </div>
             </div>
             <div className="w-full p-2">
-                    <textarea placeholder="Text" className="grow p-3 w-full"></textarea>
+                    <textarea placeholder="Send a Post" className="grow p-3 w-full"></textarea>
                 <div className="inline-flex float-right">
                     <button className="btn m-2">Send</button>
                     <button className="btn m-2">Image</button>
