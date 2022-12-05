@@ -1,5 +1,5 @@
 import React from "react"
-import { loginUser} from '../lib/auth'
+import { loginUser } from '../lib/auth'
 
 class LoginForm extends React.Component {
     state = {
@@ -14,8 +14,8 @@ class LoginForm extends React.Component {
     handleSubmit = event => {
       const { email, password} = this.state
 
-        event.preventDefault()
-        loginUser(email, password)
+      event.preventDefault()
+      loginUser(email, password)
     }
 
     render() {
