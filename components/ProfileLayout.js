@@ -1,14 +1,19 @@
 import Card from "./Card";
+import RecivedPost from "./RecivedPost";
 
-export default function ProfileHeader() {
+export default function ProfileLayout() {
     return ( 
-       <div className="w-full h-24 flex justify-center items-center border border-outline">
+        <>
             <div className="top w-7/12 border border-outline">
-                <h1>Name of Account</h1>
+                <img  src="https://images.freeimages.com/images/large-previews/43a/an-old-stone-wall-1641420.jpg"
+                      className="w-full p-0"
+                />
+                <h1 className="">Joshua Wise</h1>
                 <ul>
-                    <li>Settings</li>
+                    <li><a className="" href="/Settings">Settings</a></li>
                 </ul>
             </div>
-       </div>
+        </>
+       
     )
 }
