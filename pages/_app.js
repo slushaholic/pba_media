@@ -3,15 +3,20 @@ import Link from 'next/link'
 import '../styles/navbar.css'
 import SideBar from '../components/sidebar'
 import Footer from '../components/Footer'
+import {SessionProvider} from 'next-auth/react'
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({
+   Component,
+    pageProps: {session, ...pageProps}
+   }) {
   return (
     <>
-    <title>Hive Media</title>
-      <SideBar />
-        <Footer />
-    <Component {...pageProps} />
+    <SessionProvider session={session}>
+      <title>Hive Media</title>
+        <SideBar />
+          <Footer />
+      <Component {...pageProps} />
+    </SessionProvider>
     </>    
   ) 
 }
-export default MyApp
