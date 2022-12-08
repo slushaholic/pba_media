@@ -1,9 +1,8 @@
 import Card from "../components/Card"
 import ProfileLayout from "../components/ProfileLayout"
+import RecivedPost from "../components/RecivedPost"
 export default function Profile() {
     return (
-        <div className="w-3/4 flex justify-center items-center h-5 ">
-            <ProfileLayout />
-        </div>
+      <ProfileLayout />
     )
 }

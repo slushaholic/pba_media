@@ -11,8 +11,8 @@ export default function SendPost() {
                     <div className="p-2">
                         <textarea placeholder="Send a Post" className="grow p-4 w-3/4 border border-outline"></textarea>
                         <div className="inline-flex float-right mr-9 px-4">
-                        <button className="btn m-5">Send</button>
-                        <button className="btn my-5">Image</button>
+                        <button className="btn m-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600">Send</button>
+                        <button className="btn my-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600">Image</button>
                         </div>
                     </div>
                 </div>
