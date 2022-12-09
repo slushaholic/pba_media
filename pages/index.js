@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Card from '../components/Card'
 import SendPost from '../components/SendPost'
 import RecivedPost from '../components/RecivedPost'
+
 export default function Home() {
   return (
     <div className='container grow'>
