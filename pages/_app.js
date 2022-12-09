@@ -4,25 +4,14 @@ import SideBar from '../components/sidebar'
 import Footer from '../components/Footer'
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-<<<<<<< Updated upstream
-    <title>Hive Media</title>
-    <div > 
-    <SideBar />
+    <><title> Hive Media</title>
+    <div className='h-screen w-screen grid grid-cols-2'>
+        <SideBar />
         <Footer />
     <Component {...pageProps} />
     </div>
     </>    
-  ) 
-=======
-    <title> Hive Media</title>
-    <SideBar />
-    <Footer />
-
-    <Component {...pageProps} />
-    </>
   )
->>>>>>> Stashed changes
 }
 
 export default MyApp

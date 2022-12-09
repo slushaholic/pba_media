@@ -3,8 +3,7 @@
 export default function About() {
     return (
    <>
-   <div id="team" className="section center pt-20 pb-8 md:pt-16 dark:bg-gray-800"
->
+   <div id="team" className="section center dark:bg-gray-800 flex flex-column border border-outline">
   <div className="container xl:max-w-6xl mx-auto px-4">
     {/* section header */}
     <header className="text-center mx-auto mb-12">
