@@ -1,6 +1,6 @@
 export default function RecivedPost() {
     return(
-        <div className="container">
+        <div className="container bg-gray-100">
             <div className="inline-flex">
                  <div className="pic">
             <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
