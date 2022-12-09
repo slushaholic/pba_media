@@ -1,5 +1,6 @@
 import Card from "./Card";
 import CardProfile from "../components/CardProfile"
+
 export default function ProfileLayout() {
     return ( 
         <div className='flex justify-center items-center my-5'>
@@ -12,8 +13,10 @@ export default function ProfileLayout() {
                          className="h-32 overflow-hidden grow rounded-lg m-2 mx-w-full"
                     />   
                 </div>
+                    
                       <ul className="w-full">
                           <li className="p-3"><a className="float-right" href="/settings">Settings</a></li>
+                          <li className="py-4 px-3"><a className="float-right" href="/settings">Settings</a></li>
                       </ul>
               </div>
           </div>

@@ -8,9 +8,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <title>Hive Media</title>
-      <SideBar />
+    <div className='h-screen w-screen grid grid-cols-2'>
+        <SideBar />
         <Footer />
     <Component {...pageProps} />
+    </div>
+    
     </>    
   ) 
 }
