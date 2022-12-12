@@ -2,8 +2,8 @@ import React from 'react'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 export default function LoginButton() {
-    //const {data: session} = useSession()
-    /*if (session) {
+    const {data: session} = useSession()
+    if (session) {
         return (
             <>
             Signed in as {session.user.email}<br /> 
@@ -11,7 +11,7 @@ export default function LoginButton() {
             </>
         )
     }
-    */
+    
     return (
         <>
         <ul>

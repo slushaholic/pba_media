@@ -34,7 +34,10 @@ export const authOptions = {
         },
         
     },
-    secret: "toast",
+    secret: process.env.NextAuth_SECRET,
+    session: {
+        strategy: 'jwt'
+    },
     debug: true
 }
 
