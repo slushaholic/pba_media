@@ -5,14 +5,14 @@ import Footer from '../components/Footer'
 function MyApp({ Component, pageProps }) {
   return (
     <><title> Hive Media</title>
-    <div className='h-screen w-screen flex flex-column'>
+      <div className='h-screen w-screen flex flex-column'>
         <SideBar />
         <Footer />
-        <div className='w-full'>
-           <Component {...pageProps} />
+        <div className='w-full overflow-y-scroll'>
+          <Component {...pageProps} />
         </div>
-    </div>
-    </>    
+      </div>
+    </>
   )
 }
 
