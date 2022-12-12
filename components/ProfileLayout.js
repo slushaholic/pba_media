@@ -17,7 +17,8 @@ export default function ProfileLayout() {
                 <div className="w-full p-2">
                   <p className="float-right text-[15px] font-bold"><a href="/settings">Settings</a></p>
                   <h1 className="mx-2 text-[25px] font-semibold">Josh Wise</h1>
-                  <p className="text-[15px] px-2">Total Posts: <a className="font-semibold">2</a></p>
+                  <p><a className="px-2"><a className="font-semibold">@exampleEmail</a>.com</a></p>
+                  <p className="text-[15px] px-2 my-1">Total Posts: <a className="font-semibold">2</a></p>
                   <p className="text-[15px] px-2">Total Views: <a className="font-semibold">3</a></p>
                 </div>
               </div>
