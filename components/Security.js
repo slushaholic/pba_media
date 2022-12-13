@@ -5,13 +5,23 @@ export default function Security() {
             <div className="">
                 <div className="border border-outline p-1">
                     <h2 className="font-semibold">User Settings</h2>
-                    <p>Username: <a>exampleUsername</a></p>
-                    <p>Password: <a className="">examplePassword</a></p>
+                    <p>Username: exampleUsername</p>
+                    <p>Password: examplePassword</p>
                 </div>
                 <div className="border border-outline p-1">
                     <h2 className="font-semibold">Profile Privacy</h2>
-                    <p>Public</p>
-                    <p>Private</p>
+                    <div className="form-control">
+                        <label className="label cursor-pointer">
+                            <span className="">Public</span>
+                            <input type="radio" name="radio-1" className="radio checked:bg-gray-600" checked />
+                        </label>
+                    </div>
+                    <div className="form-control">
+                        <label className="label cursor-pointer">
+                            <span className="">Private</span>
+                            <input type="radio" name="radio-1" className="radio checked:bg-gray-600" checked />
+                        </label>
+                    </div>
                 </div>
             </div>
         </>

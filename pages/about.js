@@ -7,7 +7,7 @@ export default function About() {
         <div className="container xl:max-w-6xl mx-auto px-4">
           {/* section header */}
           <header className="text-center mx-auto mb-12">
-            <h1 className="text-2xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">
+            <h1 className="text-2xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100 text-center">
               <span className="font-light">PBA</span> Team
             </h1>
             <svg
@@ -60,11 +60,7 @@ export default function About() {
               >
                 {/* team block */}
                 <div className="relative overflow-hidden px-6">
-                  <img
-                    src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar1.png"
-                    className="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale"
-                    alt="title image"
-                  />
+                  {/* Image of Tommy goes here */}
                 </div>
                 <div className="pt-6 text-center">
                   <p className="text-lg leading-normal font-bold mb-1">Thomas Sibert</p>
@@ -89,11 +85,7 @@ export default function About() {
                 }}
               >
                 <div className="relative overflow-hidden px-6">
-                  <img
-                    src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar3.png"
-                    className="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale"
-                    alt="title image"
-                  />
+                  {/* Image of Joshua Goes here */}
                 </div>
                 <div className="pt-6 text-center">
                   <p className="text-lg leading-normal font-bold mb-1">Joshua Wise</p>
@@ -118,11 +110,7 @@ export default function About() {
                 }}
               >
                 <div className="relative overflow-hidden px-6">
-                  <img
-                    src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar2.png"
-                    className="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale"
-                    alt="title image"
-                  />
+                 {/* Image of Gilbert goes here */}
                 </div>
                 <div className="pt-6 text-center">
                   <p className="text-lg leading-normal font-bold mb-1">Gilbert Pelealu</p>
@@ -147,11 +135,7 @@ export default function About() {
                 }}
               >
                 <div className="relative overflow-hidden px-6">
-                  <img
-                    src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar4.png"
-                    className="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale"
-                    alt="title image"
-                  />
+                 {/* Image of Ethan goes here */}
                 </div>
                 <div className="pt-6 text-center">
                   <p className="text-lg leading-normal font-bold mb-1">Ethan Weldy</p>
