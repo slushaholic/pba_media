@@ -3,12 +3,13 @@ export default function Security() {
         <>
             <h1 className="text-[20px] font-semibold">Security</h1>
             <div className="">
-                <div className="border border-outline p-1">
+                <div className="p-1">
                     <h2 className="font-semibold">User Settings</h2>
                     <p>Username: exampleUsername</p>
                     <p>Password: examplePassword</p>
                 </div>
-                <div className="border border-outline p-1">
+                <div className="my-2 bg-gray-600 h-[1px]" />
+                <div className="p-1">
                     <h2 className="font-semibold">Profile Privacy</h2>
                     <div className="form-control">
                         <label className="label cursor-pointer">

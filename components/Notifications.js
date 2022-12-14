@@ -2,7 +2,7 @@ export default function Notifications() {
     return (
             <>
                 <h1 className="text-[20px] font-semibold">Notifications</h1>
-                <div className="border border-outline p-1">
+                <div className="p-1">
                     <h2 className="font-semibold">Post Notifications</h2>
                     <div className="form-control">
                         <label className="label cursor-pointer">

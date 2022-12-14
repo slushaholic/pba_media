@@ -60,7 +60,6 @@ export default function About() {
               >
                 {/* team block */}
                 <div className="relative overflow-hidden px-6">
-                  {/* Image of Tommy goes here */}
                 </div>
                 <div className="pt-6 text-center">
                   <p className="text-lg leading-normal font-bold mb-1">Thomas Sibert</p>
