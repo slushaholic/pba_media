@@ -7,7 +7,7 @@ export default function LoginButton() {
         return (
             <>
             Signed in as {session.user.email}<br /> 
-            <li><a className="text-[15px] ml-4 text-gray-200 font-bold" href='/login'>Log Out</a></li> 
+            <li><a className="text-[15px] ml-4 text-gray-200 font-bold" onClick={() => signOut()}>Log Out</a></li> 
             </>
         )
     }
