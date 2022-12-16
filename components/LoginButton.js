@@ -16,7 +16,7 @@ export default function LoginButton() {
         <>
         <ul>
             Not Signed in< br />
-            <li><a className="text-[15px] ml-4 text-gray-200 font-bold" onClick={() => signIn()}>Login</a></li> 
+            <li><a className="text-[15px] ml-4 text-gray-200 font-bold" href="/login">Login</a></li> 
         </ul>
         </>
     )

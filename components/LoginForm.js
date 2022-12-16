@@ -1,24 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import { loginUser } from '../lib/auth'
+import { getCsrfToken, getProviders, signIn, getSession} from 'next-auth/react'
 
-class LoginForm extends React.Component {
-    state = {
-        email: '',
-        password: ''
-    }
 
-    handleChange = event => {
-        this.setState({ [event.target.name]: event.target.value })
-    }
-
-    handleSubmit = event => {
-      const { email, password} = this.state
-
+export default function LoginForm({}) {
+  
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [message, setMessage] = useState(null)
+    const signInUser= async (event) => {
       event.preventDefault()
-      loginUser(email, password)
+      let options = {redirect:false, username, password}
+      const res = await signIn("credentials", options)
+      setMessage(null)
+
+      if (res?.error) {
+        setMessage(res.error)
+      }
+
+      //return Router.push("/")
+
+      console.log(username,password)
     }
 
-    render() {
+    
+
+    
+
+    
         return(
             <>
         <link
@@ -37,18 +46,17 @@ class LoginForm extends React.Component {
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
-          onSubmit={this.handleSubmit}
+          
         >
           <div className="flex flex-col pt-4">
             <label htmlFor="email" className="text-lg">
-              Email
+              Username
             </label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="your@email.com"
-              onChange={this.handleChange}
+              
+              placeholder="Username"
+              value={username}
+              onChange={e=>setUsername(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -57,19 +65,22 @@ class LoginForm extends React.Component {
               Password
             </label>
             <input
-              type="password"
-              id="password"
-              name="password"
+              
               placeholder="Password"
-              onChange={this.handleChange}
+              value={password}
+              onChange={e=>setPassword(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
-          <input
-            type="submit"
-            defaultValue="Log In"
+          <div className="text-center pt-12 pb-12">
+          <p>
+            
+            </p>
+          </div>
+          <button
+            onClick={(e)=>signInUser()}
             className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
-          />
+            >Log In</button>
         </form>
         <div className="text-center pt-12 pb-12">
           <p>
@@ -85,6 +96,4 @@ class LoginForm extends React.Component {
 </>
         )
     }
-}
 
-export default LoginForm

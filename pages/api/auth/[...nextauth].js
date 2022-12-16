@@ -4,7 +4,9 @@ import clientPromise from '../../../lib/mongodb'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import axios from 'axios'
 import jwt from 'next-auth/jwt'
-
+import connectDB from '../../../lib/connectDB'
+import Users from '../../../models/userModel'
+connectDB()
 export const authOptions = {
     providers: [
         
@@ -15,18 +17,17 @@ export const authOptions = {
                 password: { label: "Password", type: "password"}
             },
             async authorize(credentials, req) {
-                const user = { id: "1", name: "J Smith",username: "jsmith", password: "toast", email: "jsmith@example.com"}
-
-                if (user.username === credentials.username && user.password === credentials.password) {
-                    return user
-                } else {
-                    return null
-                    console.log(console.error())
+                const username = credentials.username
+                const password = credentials.password
+                const user = await Users.findOne({username})
+                if (!user) {
+                    throw new Error("You haven't registered yet")
                 }
+                if (user) {return signInUser({password,user})}
             }
         })
     ],
-    adapter: MongoDBAdapter(clientPromise),
+    
     callbacks: {
         async jwt({ token, account}) {
             if (account) {
@@ -47,6 +48,13 @@ export const authOptions = {
         strategy: 'jwt'
     },
     debug: true
+}
+
+const signInUser = async({password, user}) => {
+    if(!user.password) {
+        throw new Error("Please enter password")
+    }
+    //const isMatch = await bcrypt
 }
 
 export default NextAuth(authOptions)
