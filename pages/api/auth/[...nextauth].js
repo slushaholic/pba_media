@@ -6,6 +6,7 @@ import axios from 'axios'
 import jwt from 'next-auth/jwt'
 import connectDB from '../../../lib/connectDB'
 import Users from '../../../models/userModel'
+import bcrypt from 'bcrypt'
 connectDB()
 export const authOptions = {
     providers: [
@@ -54,7 +55,11 @@ const signInUser = async({password, user}) => {
     if(!user.password) {
         throw new Error("Please enter password")
     }
-    //const isMatch = await bcrypt
+    const isMatch = await bcrypt.compare(password, user)
+    if (isMatch) {
+        throw new Error('Password not correct')
+    }
+    return user
 }
 
 export default NextAuth(authOptions)

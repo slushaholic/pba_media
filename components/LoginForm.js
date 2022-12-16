@@ -1,15 +1,20 @@
 import React, { useState } from "react"
 import { loginUser } from '../lib/auth'
 import { getCsrfToken, getProviders, signIn, getSession} from 'next-auth/react'
+import { useRouter } from 'next/router'
+ 
 
 
-export default function LoginForm({}) {
+
+export default function LoginForm({getCsrfToken, providers}) {
   
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState(null)
-    const signInUser= async (event) => {
+    const router = useRouter()
+    const signInUser = async (e) => {
       event.preventDefault()
+
       let options = {redirect:false, username, password}
       const res = await signIn("credentials", options)
       setMessage(null)
@@ -18,7 +23,7 @@ export default function LoginForm({}) {
         setMessage(res.error)
       }
 
-      //return Router.push("/")
+      //return router.push('/')
 
       console.log(username,password)
     }
@@ -47,6 +52,8 @@ export default function LoginForm({}) {
         <form
           className="flex flex-col pt-3 md:pt-8"
           
+          action="/api/auth/signin/credentials"
+          
         >
           <div className="flex flex-col pt-4">
             <label htmlFor="email" className="text-lg">
@@ -74,7 +81,7 @@ export default function LoginForm({}) {
           </div>
           <div className="text-center pt-12 pb-12">
           <p>
-            
+            {message}
             </p>
           </div>
           <button

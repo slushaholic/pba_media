@@ -12,6 +12,7 @@
   "dependencies": {
     "@next-auth/mongodb-adapter": "^1.1.1",
     "axios": "^1.2.0",
+    "bcrypt": "^5.1.0",
     "create-react-app": "^5.0.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
