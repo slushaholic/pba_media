@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import { loginUser } from '../lib/auth'
-import { getCsrfToken, getProviders, signIn, getSession} from 'next-auth/react'
-import { useRouter } from 'next/router'
- 
+
 
 
 
@@ -28,11 +26,7 @@ export default function LoginForm({getCsrfToken, providers}) {
       console.log(username,password)
     }
 
-    
-
-    
-
-    
+    render() {
         return(
             <>
         <link
@@ -52,18 +46,19 @@ export default function LoginForm({getCsrfToken, providers}) {
         <form
           className="flex flex-col pt-3 md:pt-8"
           
-          action="/api/auth/signin/credentials"
-          
         >
           <div className="flex flex-col pt-4">
-            <label htmlFor="email" className="text-lg">
+            <label htmlFor="username" className="text-lg">
               Username
             </label>
             <input
               
-              placeholder="Username"
-              value={username}
+              id="username"
+              name="username"
+              placeholder="username"
+              value = {username}
               onChange={e=>setUsername(e.target.value)}
+              
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -73,6 +68,8 @@ export default function LoginForm({getCsrfToken, providers}) {
             </label>
             <input
               
+              id="password"
+              name="password"
               placeholder="Password"
               value={password}
               onChange={e=>setPassword(e.target.value)}
@@ -103,4 +100,3 @@ export default function LoginForm({getCsrfToken, providers}) {
 </>
         )
     }
-
