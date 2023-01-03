@@ -1,23 +1,55 @@
+import DirectMessageBottom from "../components/DirectMessageBottom"
 import CardMessages from "../components/CardMessages"
 export default function directmessage() {
   return (
-    <div className="container relative m-3 h-full">
-      <div className="absolute bottom-x-0 bottom-0 w-full">
-        <div className="flex w-11/12 justify-center items-center">
-          <CardMessages>
-          <div className="w-full inline-flex">
-              <textarea className="textarea textarea-bordered w-11/12" placeholder="Send a Message..."></textarea>
-                <button className="btn btn my-3 mx-2">
-                Send
-              </button>
-              <button className="btn btn my-3">
-                Images
-              </button>
-          </div>
-          </CardMessages>    
-        </div>
-        
+    <>
+      <div className="mx-h-5/6 border border-outline">
+            <CardMessages>
+              <div className="UserMessage w-full border border-outline p-2">
+                <div className="UserInfo border border-outline w-fit p-2">
+                  <h1 className="text-s">Joshua Wise</h1>
+                  <p className="text-xs">Sent Message</p>
+                </div>
+                <div className="container p-2">
+                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
+                </div>
+              </div>
+            </CardMessages>
+            <CardMessages>
+              <div className="UserMessage w-full border border-outline p-2">
+                <div className="UserInfo border border-outline w-fit p-2">
+                  <h1 className="text-s">Joshua Wise</h1>
+                  <p className="text-xs">Sent Message</p>
+                </div>
+                <div className="container p-2">
+                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
+                </div>
+              </div>
+            </CardMessages>
+            <CardMessages>
+              <div className="UserMessage w-full border border-outline p-2">
+                <div className="UserInfo border border-outline w-fit p-2">
+                  <h1 className="text-s">Joshua Wise</h1>
+                  <p className="text-xs">Sent Message</p>
+                </div>
+                <div className="container p-2">
+                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
+                </div>
+              </div>
+            </CardMessages>
+            <CardMessages>
+              <div className="UserMessage w-full border border-outline p-2">
+                <div className="UserInfo border border-outline w-fit p-2">
+                  <h1 className="text-s">Joshua Wise</h1>
+                  <p className="text-xs">Sent Message</p>
+                </div>
+                <div className="container p-2">
+                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
+                </div>
+              </div>
+            </CardMessages>
       </div>
-    </div>
+      <DirectMessageBottom />
+    </>
   )
 }
