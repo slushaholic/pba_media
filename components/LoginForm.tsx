@@ -1,17 +1,60 @@
 import React, { useState } from "react"
 import { loginUser } from '../lib/auth'
+import { useRouter } from "next/router"
+import { useSession, signIn, getProviders } from "next-auth/react"
+import axios from "axios"
+import Router from "next/router"
 
 
 
 
 export default function LoginForm({getCsrfToken, providers}) {
   
+    const {data: session} = useSession()
+    const [authType, setAuthType] = useState("Login")
+    const oppAuthType: { [key: string]: string} = {
+      Login: "Register",
+      Register: "Login"
+    }
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState(null)
     const router = useRouter()
-    const signInUser = async (e) => {
-      event.preventDefault()
+
+    const registerUser = async () => {
+      const res = await axios 
+        .post(
+          "/api/register",
+          { username, password},
+          {
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json"
+            }
+          }
+        )
+        .then(async () => {
+          await loginUser()
+          Router.push("/")
+
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    }
+    const loginUser = async () => {
+      const res: any = await signIn("credentials", {
+        redirect: false,
+        username: username,
+        password: password,
+        callbackUrl: `${window.location.origin}`
+      })
+
+      res.error ? console.log(res.error) : Router.push("/")
+    }
+
+    /*const signInUser = async (e) => {
+      e.preventDefault()
 
       let options = {redirect:false, username, password}
       const res = await signIn("credentials", options)
@@ -24,9 +67,14 @@ export default function LoginForm({getCsrfToken, providers}) {
       //return router.push('/')
 
       console.log(username,password)
+    }*/
+
+    const formSubmit = (actions: any) => {
+      actions.setSubmitting(false)
+
+      authType === "Login" ? loginUser() : registerUser()
     }
 
-    render() {
         return(
             <>
         <link
@@ -41,10 +89,16 @@ export default function LoginForm({getCsrfToken, providers}) {
   />
 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '80vh'}}>
     <div className="w-full md:w-1/2 flex flex-col">
+      <p>
+        {authType === "Login" ? "Not regisered yet? " : "Already have an account? "}
+        </p>
+      <button onClick={() => setAuthType(oppAuthType[authType])}>{oppAuthType[authType]}</button>
       <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
+          
+
           
         >
           <div className="flex flex-col pt-4">
@@ -82,7 +136,7 @@ export default function LoginForm({getCsrfToken, providers}) {
             </p>
           </div>
           <button
-            onClick={(e)=>signInUser()}
+            onClick={(e)=>signInUser(e)}
             className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
             >Log In</button>
         </form>
