@@ -1,55 +1,65 @@
-import DirectMessageBottom from "../components/DirectMessageBottom"
-import CardMessages from "../components/CardMessages"
-export default function directmessage() {
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import Card from '../components/Card'
+import DirectMessageSender from '../components/DirectMessageSender'
+import OtherMessage from '../components/OtherMessages'
+import UserMessage from '../components/UserMessage'
+
+export default function Home() {
   return (
     <>
-      <div className="mx-h-5/6 border border-outline">
-            <CardMessages>
-              <div className="UserMessage w-full border border-outline p-2">
-                <div className="UserInfo border border-outline w-fit p-2">
-                  <h1 className="text-s">Joshua Wise</h1>
-                  <p className="text-xs">Sent Message</p>
-                </div>
-                <div className="container p-2">
-                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
-                </div>
-              </div>
-            </CardMessages>
-            <CardMessages>
-              <div className="UserMessage w-full border border-outline p-2">
-                <div className="UserInfo border border-outline w-fit p-2">
-                  <h1 className="text-s">Joshua Wise</h1>
-                  <p className="text-xs">Sent Message</p>
-                </div>
-                <div className="container p-2">
-                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
-                </div>
-              </div>
-            </CardMessages>
-            <CardMessages>
-              <div className="UserMessage w-full border border-outline p-2">
-                <div className="UserInfo border border-outline w-fit p-2">
-                  <h1 className="text-s">Joshua Wise</h1>
-                  <p className="text-xs">Sent Message</p>
-                </div>
-                <div className="container p-2">
-                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
-                </div>
-              </div>
-            </CardMessages>
-            <CardMessages>
-              <div className="UserMessage w-full border border-outline p-2">
-                <div className="UserInfo border border-outline w-fit p-2">
-                  <h1 className="text-s">Joshua Wise</h1>
-                  <p className="text-xs">Sent Message</p>
-                </div>
-                <div className="container p-2">
-                  <p className="text-s">This is a sample text message instead of lorem ipsum because I don't want to pull up a generator.</p>
-                </div>
-              </div>
-            </CardMessages>
+      <div className='container'>
+        <div className='inline-flex'>
+          <div className='flex justify-center items-center my-5 relative'>
+          <div className='my-2 w-1/2'>
+              <DirectMessageSender />
+          </div>
+        </div>
+        <div className='flex justify-center items-center my-5 relative'>
+          <div className='my-2 w-1/2'>
+            
+          </div>
+        </div>
+        </div>
+        <div className='flex justify-center items-center my-5'>
+          <div className='my-2 w-10/12'>
+            <Card>
+              <UserMessage />
+            </Card>
+          </div>
+        </div>
+        <div className='flex justify-center items-center my-5'>
+          <div className='my-2 w-10/12'>
+            <Card>
+              <OtherMessage />
+            </Card>
+          </div>
+        </div>
+        <div className='flex justify-center items-center my-5'>
+          <div className='my-2 w-10/12'>
+            <Card>
+              <OtherMessage />
+            </Card>
+          </div>
+        </div>
+        <div className='flex justify-center items-center my-5'>
+          <div className='my-2 w-10/12'>
+            <Card>
+              <OtherMessage />
+            </Card>
+          </div>
+        </div>
+        <div className='flex justify-center items-center my-5'>
+          <div className='my-2 w-10/12'>
+            <Card>
+              <OtherMessage />
+            </Card>
+          </div>
+        </div>
+        <div className='flex justify-center items-center my-5'>
+        </div>
       </div>
-      <DirectMessageBottom />
     </>
   )
 }
