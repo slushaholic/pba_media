@@ -41,6 +41,7 @@ export default async function handler(
             .status(200)
             .json({ error: "This API call only accepts POST methods"})
     }
+    console.log("/api/register has been called")
 
     const {username, password} = req.body
     const errorMessage = await validateForm(username, password)
