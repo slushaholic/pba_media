@@ -10,19 +10,26 @@
     "devStart": "nodemon server.js"
   },
   "dependencies": {
+    "@next-auth/mongodb-adapter": "^1.1.1",
     "axios": "^1.2.0",
+    "bcrypt": "^5.1.0",
     "create-react-app": "^5.0.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "express": "^4.18.2",
+    "fs": "^0.0.1-security",
     "mongodb": "^4.12.1",
+    "mongoose": "^6.8.0",
     "next": "13.0.3",
+    "next-auth": "^4.18.3",
+    "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-hook": "^0.0.1",
     "typescript": "^4.9.3"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/react": "18.0.25",
     "autoprefixer": "^10.4.13",
     "daisyui": "^2.40.1",
