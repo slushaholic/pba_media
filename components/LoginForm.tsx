@@ -70,7 +70,7 @@ export default function LoginForm({getCsrfToken, providers}) {
     }*/
 
     const formSubmit = (actions: any) => {
-      actions.setSubmitting(false)
+      //actions.setSubmitting(false)
 
       authType === "Login" ? loginUser() : registerUser()
     }
@@ -90,14 +90,16 @@ export default function LoginForm({getCsrfToken, providers}) {
 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '80vh'}}>
     <div className="w-full md:w-1/2 flex flex-col">
       <p>
-        {authType === "Login" ? "Not regisered yet? " : "Already have an account? "}
+        {authType === "Login" ? "Not registered yet? " : "Already have an account? "}
         </p>
       <button onClick={() => setAuthType(oppAuthType[authType])}>{oppAuthType[authType]}</button>
       <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
-          
+          onSubmit={(_, actions) => {
+            formSubmit(actions)
+          }}
 
           
         >
@@ -136,17 +138,12 @@ export default function LoginForm({getCsrfToken, providers}) {
             </p>
           </div>
           <button
-            onClick={(e)=>signInUser(e)}
+            type="submit"
             className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
-            >Log In</button>
+            >{oppAuthType[authType] === "Login" ? "Register" : "Login"}</button>
         </form>
         <div className="text-center pt-12 pb-12">
-          <p>
-            Don't have an account?{" "}
-            <a href="register" className="underline font-semibold">
-              Register here.
-            </a>
-          </p>
+          
         </div>
       </div>
     </div>
