@@ -1,4 +1,4 @@
-export default function RecivedPost() {
+export default function UserPost() {
     return (
         <div className="bg-gray-100">
             <div className="inline-flex">
