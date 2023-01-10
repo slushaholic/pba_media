@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Card from '../components/Card'
 import SendPost from '../components/SendPost'
 import RecivedPost from '../components/RecivedPost'
-
+import UserPost from '../components/UserPost'
 export default function Home() {
   return (
     <>
@@ -26,7 +26,7 @@ export default function Home() {
         <div className='flex justify-center items-center my-5'>
           <div className='my-2 w-10/12'>
             <Card>
-              <RecivedPost />
+              <UserPost />
             </Card>
           </div>
         </div>
