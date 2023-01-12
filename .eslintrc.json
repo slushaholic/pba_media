@@ -2,6 +2,8 @@
     "extends": "next/core-web-vitals",
     "rules": {
         "semi": "warn",
-        "indent": ["warn", "tab"]
+        "indent": ["warn", "tab"],
+        "react/no-unescaped-entities": "off",
+        "@next/next/no-page-custom-font": "off"
     }
 }
