@@ -8,7 +8,7 @@ import Router from "next/router"
 
 
 
-export default function LoginForm({providers}) {
+export default function LoginForm() {
   
     const {data: session} = useSession()
     const [authType, setAuthType] = useState("Login")
@@ -139,10 +139,7 @@ export default function LoginForm({providers}) {
             </p>
           </div>
           <div>
-          <button 
-          onClick={() => signIn(providers.id, {
-            callbackUrl: `${process.env.NEXTAUTH_URL}/`,
-          })}>Sign in with Google</button>
+          
             
           </div>
           <button
