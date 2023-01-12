@@ -18,18 +18,24 @@ const validateForm = async (
         return {error: "Username must have 3 or more characters"}
     }
     
+    
     await connectDB()
+    
     const usernameUser = await User.findOne({username: username})
+    
 
     if (usernameUser) {
+        
         return { error: "Username already exists"}
     }
 
     if (password.length < 5) {
+        console.log("password is not long enough")
         return {error: "Password must have 5 or more characters"}
     }
-
+    console.log("null was returned")
     return null
+    console.log("something is wrong")
 }
 
 export default async function handler(

@@ -1,5 +1,6 @@
 import NextAuth from "next-auth"
 import  CredentialsProvider  from "next-auth/providers/credentials"
+import GoogleProvider from "next-auth/providers/google"
 import connectDB from "../../../lib/connectDB"
 import { MongoDBAdapter} from "@next-auth/mongodb-adapter"
 import User from "../../models/userModels"
@@ -12,6 +13,10 @@ connectDB()
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+    }),
     CredentialsProvider({
         
         name: "Credentials",
@@ -49,7 +54,7 @@ export default NextAuth({
             if (!isPasswordCorrect) {
               throw new Error("Password is incorrect");
             }
-    
+            console.log(JSON.stringify(user))
             return user;
           },
       })

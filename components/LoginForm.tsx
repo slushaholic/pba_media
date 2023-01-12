@@ -8,7 +8,7 @@ import Router from "next/router"
 
 
 
-export default function LoginForm({getCsrfToken, providers}) {
+export default function LoginForm({providers}) {
   
     const {data: session} = useSession()
     const [authType, setAuthType] = useState("Login")
@@ -39,18 +39,19 @@ export default function LoginForm({getCsrfToken, providers}) {
 
         })
         .catch((error) => {
-          console.log(error)
+          setMessage(error)
         })
     }
     const loginUser = async () => {
+      event?.preventDefault()
       const res: any = await signIn("credentials", {
         redirect: false,
         username: username,
         password: password,
-        callbackUrl: `${window.location.origin}`
+        callbackUrl: `${process.env.NEXTAUTH_URL}`
       })
 
-      res.error ? console.log(res.error) : Router.push("/")
+      res.error ? setMessage(res.error) : Router.push("/")
     }
 
     /*const signInUser = async (e) => {
@@ -97,7 +98,7 @@ export default function LoginForm({getCsrfToken, providers}) {
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
-          onSubmit={(_, actions) => {
+          onSubmit={(actions) => {
             formSubmit(actions)
           }}
 
@@ -136,6 +137,13 @@ export default function LoginForm({getCsrfToken, providers}) {
           <p>
             {message}
             </p>
+          </div>
+          <div>
+          <button 
+          onClick={() => signIn(providers.id, {
+            callbackUrl: `${process.env.NEXTAUTH_URL}/`,
+          })}>Sign in with Google</button>
+            
           </div>
           <button
             type="submit"
