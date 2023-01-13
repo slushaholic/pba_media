@@ -68,8 +68,8 @@ class MessagesContainer extends Component {
   }
 
   scrollToBottom = () => {
-    var el = this.ref.scroll;
-    el.scrollTop = el.scrollHeight;
+    //var el = this.ref.scroll;
+    //el.scrollTop = el.scrollHeight;
   }
 
   componentDidMount() {
@@ -90,7 +90,7 @@ class MessagesContainer extends Component {
   render() {
 
     return (
-      <ul className="messages text-center" ref={this.ref.scroll}>
+      <ul className="messages text-center" >
         {this.createBotMessages()}
       </ul>
     );
