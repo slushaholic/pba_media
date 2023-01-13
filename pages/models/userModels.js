@@ -1,8 +1,12 @@
+import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+  id: {
+    type: ObjectId
+  }, 
   username: {
     type: String,
     required: true,
@@ -19,6 +23,6 @@ const userSchema = new Schema({
 });
 
 
-export default User = mongoose.models.User || mongoose.model("User", userSchema);;
+export default User = mongoose.models.User || mongoose.model("User", userSchema);
 
 
