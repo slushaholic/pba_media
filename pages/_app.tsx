@@ -15,10 +15,15 @@ export default function MyApp({
   return (
     <>
     <SessionProvider session={session}>
-      <title>Hive Media</title>
+    <title> Hive Media</title>
+      <div className='h-screen w-screen flex flex-column'>
         <SideBar />
-          <Footer />
-      <Component {...pageProps} />
+        <Footer />
+        <div className='w-full overflow-y-scroll'>
+          <Component {...pageProps} />
+        </div>
+      </div>
+     
     </SessionProvider>
     </>    
   ) 
