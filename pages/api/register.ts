@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import connectDB from "../../lib/connectDB"
-import User from "../models/userModels"
+import User from "../../models/userModel"
 import bcrypt from "bcrypt"
 
 interface ResponseData {
