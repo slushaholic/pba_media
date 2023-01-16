@@ -18,7 +18,7 @@ export default function LoginButton() {
         <>
         <ul>
             Not Signed in< br />
-            <li><a className="text-[15px] ml-4 text-gray-200 font-bold" href="/login">Login</a></li> 
+            <li><Link className="text-[15px] ml-4 text-gray-200 font-bold" href="/login">Login</Link></li> 
         </ul>
         </>
     )
