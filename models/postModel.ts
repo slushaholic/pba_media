@@ -18,9 +18,5 @@ const postSchema = new Schema({
       type: String,
     },
   });
-  
-  
-  
-  
-  export const Post =  mongoose.models.Post ?? mongoose.model("Post", postSchema);
+  export const Post =  mongoose.models?.Post ?? mongoose.model("Post", postSchema);
   export default Post

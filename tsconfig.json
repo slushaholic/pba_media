@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/account/login.jsx"  ],
+, "pages/account/login.jsx", "components/SendPost.js"  ],
   "exclude": [
     "node_modules"
   ]

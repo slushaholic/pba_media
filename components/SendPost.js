@@ -1,8 +1,14 @@
 import { useState } from "react"
+import Post from "../models/postModel"
+import { useSession } from "next-auth/react"
+import connectDB from "../lib/connectDB"
+import axios from "axios"
 
 export default function SendPost() {
 
     const [content, setContent] = useState('')
+
+    const { data: session } = useSession()
     return (
         <div className="container bg-gray-100">
             <div className="inline-flex w-full">
@@ -13,16 +19,30 @@ export default function SendPost() {
             </div>
             <div className="container">
                 <div className="p-2 flex flex-column justify-between">
-                    <textarea placeholder="Send a Post" className="p-4 w-3/4 border border-outline" onChange={e=>setContent(e.target.value)}></textarea>
+                    <textarea placeholder="Send a Post" className="p-4 w-3/4 border border-outline" onChange={e => setContent(e.target.value)}></textarea>
                     <div className="inline-flex float-right w-1/4">
-                        <button 
-                        className="btn m-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600"
-                        onClick={() => {}}
+                        <button
+                            className="btn m-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600"
+                            onClick={async () => {
+                                if (session) {
+                                const res = await axios
+                                    .post(
+                                        "/api/newPost",
+                                        { userid: session.user.userid, content },
+                                        {
+                                            headers: {
+                                                Accept: "application/json",
+                                                "Content-Type": "application/json"
+                                            }
+                                        })
+                                    }
+
+                            }}
                         >
                             Send
                         </button>
                         <button
-                         className="btn my-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600"
+                            className="btn my-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600"
                         >Image</button>
                     </div>
                 </div>
