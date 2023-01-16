@@ -6,6 +6,7 @@ import User from "../../../models/userModel"
 import mongoose from "mongoose"
 import { compare} from "bcrypt"
 import clientPromise from "../../../lib/mongodb"
+import { DefaultSession } from "next-auth"
 
 connectDB()
 
@@ -29,7 +30,7 @@ export default NextAuth({
         await connectDB();
     
         // Find user with the email
-        const user = await User.findOne({
+        const user:any = await User.findOne({
           username: credentials?.username,
         });
 
@@ -67,8 +68,7 @@ export default NextAuth({
         return token
     },
     async session ({ session, token, user}) {
-        session.accessToken = token.accessToken
-        session.user = token.user
+        session.user = <DefaultSession["user"]>token.user
         console.log(session);
         
         
