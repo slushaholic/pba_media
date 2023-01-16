@@ -1,6 +1,5 @@
 import NextAuth from "next-auth"
 import  CredentialsProvider  from "next-auth/providers/credentials"
-import GoogleProvider from "next-auth/providers/google"
 import connectDB from "../../../lib/connectDB"
 import { MongoDBAdapter} from "@next-auth/mongodb-adapter"
 import User from "../../../models/userModel"
@@ -13,51 +12,21 @@ connectDB()
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    }),
-    CredentialsProvider({
-        
-        name: "Credentials",
-        
-        credentials: {
-          username: {
-            label: "Username",
-            type: "text"
-          },
-          password: {
-            label: "Password",
-            type: "password"
-          }
+
+    CredentialsProvider ({
+      name: "Credentials",
+      credentials: {
+        username: {
+          label: "Username",
+          type: "text",
+          placeholder: "username",
         },
-        async authorize(credentials) {
-            await connectDB();
-    
-            // Find user with the email
-            const user = await User.findOne({
-              username: credentials?.username,
-            });
-    
-            // Email Not found
-            if (!user) {
-              throw new Error("User is not registered");
-            }
-    
-            // Check hased password with DB hashed password
-            const isPasswordCorrect = await compare(
-              credentials!.password,
-              user.hashedPassword
-            );
-    
-            // Incorrect password
-            if (!isPasswordCorrect) {
-              throw new Error("Password is incorrect");
-            }
-            console.log(JSON.stringify(user))
-            return user;
-          },
-      })
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+
+      }
+    })
   ],
   adapter: MongoDBAdapter(clientPromise),
   pages: {
