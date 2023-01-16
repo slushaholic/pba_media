@@ -48,7 +48,7 @@ export default function LoginForm() {
         redirect: false,
         username: username,
         password: password,
-        callbackUrl: `${process.env.NEXTAUTH_URL}`
+        callbackUrl: '/'
       })
 
       res.error ? setMessage(res.error) : Router.push("/")

@@ -23,8 +23,33 @@ export default NextAuth({
         },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials) {
+      async authorize(credentials, req) {
+        console.log("authorize");
+        
+        await connectDB();
+    
+        // Find user with the email
+        const user = await User.findOne({
+          username: credentials?.username,
+        });
 
+        // Email Not found
+        if (!user) {
+          throw new Error("User is not registered");
+        }
+
+        // Check hased password with DB hashed password
+        const isPasswordCorrect = await compare(
+          credentials!.password,
+          user.hashedPassword
+        );
+
+        // Incorrect password
+        if (!isPasswordCorrect) {
+          throw new Error("Password is incorrect");
+        }
+        console.log(JSON.stringify(user))
+        return user;
       }
     })
   ],
