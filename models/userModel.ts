@@ -4,8 +4,11 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  id: {
-    type: ObjectId
+  userid: {
+    type: String,
+    required: true,
+    unique: true
+
   }, 
   username: {
     type: String,
@@ -16,6 +19,9 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5,
+  },
+  name: {
+    type: String,
   },
   image: {
     type: String,

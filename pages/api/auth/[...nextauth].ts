@@ -57,6 +57,26 @@ export default NextAuth({
   pages: {
     signIn: "/login"
   },
+  callbacks: {
+    
+    async jwt({ token, user, account, profile}) {
+        if (account) {
+            token.accessToken = account.access_token 
+            token.user = user
+        }
+        return token
+    },
+    async session ({ session, token, user}) {
+        session.accessToken = token.accessToken
+        session.user = token.user
+        console.log(session);
+        
+        
+
+      
+        return session
+    }
+},
   
   debug: process.env.NODE_ENV === "development",
   

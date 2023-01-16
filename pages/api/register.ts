@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import connectDB from "../../lib/connectDB"
 import User from "../../models/userModel"
 import bcrypt from "bcrypt"
+import { randomUUID } from "crypto"
 
 interface ResponseData {
     error?: string
@@ -56,8 +57,9 @@ export default async function handler(
     }
 
     const hashedPassword = await bcrypt.hash(password, 12)
-
+    const userid = randomUUID()
     const newUser = new User({
+        userid,
         username,
         hashedPassword
 

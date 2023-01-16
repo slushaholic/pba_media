@@ -22,7 +22,10 @@ export default function LoginForm() {
     const router = useRouter()
 
     const registerUser = async () => {
-      const res = await axios 
+      console.log("registerUser is called");
+      
+      const res = await axios
+      
         .post(
           "/api/register",
           { username, password},
@@ -43,6 +46,8 @@ export default function LoginForm() {
         })
     }
     const loginUser = async () => {
+      console.log("loginUser is called");
+      
       event?.preventDefault()
       const res: any = await signIn("credentials", {
         redirect: false,
@@ -70,12 +75,7 @@ export default function LoginForm() {
       console.log(username,password)
     }*/
 
-    const formSubmit = (actions: any) => {
-      //actions.setSubmitting(false)
-
-      authType === "Login" ? loginUser() : registerUser()
-    }
-
+    
         return(
             <>
         <link
@@ -98,9 +98,7 @@ export default function LoginForm() {
         <p className="text-center text-3xl">Welcome.</p>
         <form
           className="flex flex-col pt-3 md:pt-8"
-          onSubmit={(actions) => {
-            formSubmit(actions)
-          }}
+          
 
           
         >
@@ -143,9 +141,11 @@ export default function LoginForm() {
             
           </div>
           <button
-            type="submit"
             className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
-            >{oppAuthType[authType] === "Login" ? "Register" : "Login"}</button>
+            onClick={ () => 
+              authType === "Login" ? loginUser() : registerUser()
+            }
+            >{authType}</button>
         </form>
         <div className="text-center pt-12 pb-12">
           

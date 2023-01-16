@@ -1,4 +1,8 @@
+import { useState } from "react"
+
 export default function SendPost() {
+
+    const [content, setContent] = useState('')
     return (
         <div className="container bg-gray-100">
             <div className="inline-flex w-full">
@@ -9,10 +13,17 @@ export default function SendPost() {
             </div>
             <div className="container">
                 <div className="p-2 flex flex-column justify-between">
-                    <textarea placeholder="Send a Post" className="p-4 w-3/4 border border-outline"></textarea>
+                    <textarea placeholder="Send a Post" className="p-4 w-3/4 border border-outline" onChange={e=>setContent(e.target.value)}></textarea>
                     <div className="inline-flex float-right w-1/4">
-                        <button className="btn m-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600">Send</button>
-                        <button className="btn my-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600">Image</button>
+                        <button 
+                        className="btn m-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600"
+                        onClick={() => {}}
+                        >
+                            Send
+                        </button>
+                        <button
+                         className="btn my-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600"
+                        >Image</button>
                     </div>
                 </div>
             </div>
