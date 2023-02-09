@@ -20,10 +20,10 @@ export default async function handler (
     }
 
     connectDB();
-    const tempPost = Post.find({
+    const tempPost:any = await Post.findOne({
         content: "Pretty Princess"
     })
-    return (await tempPost).toString
+    res.send(tempPost.content)
 
 
 }

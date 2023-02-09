@@ -25,6 +25,7 @@ export default function SendPost() {
                             className="btn m-5 text-white bg-gray-600 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600 font-medium text-sm dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-600 dark:border-gray-600"
                             onClick={async () => {
                                 if (session) {
+                                    console.log(session.user.username)
                                 const res = await axios
                                     .post(
                                         "/api/newPost",

@@ -5,7 +5,7 @@ export default function UserPost() {
 
     const getPost = async () => {
         const res = await axios.get("/api/post")
-       return res.data
+       return res
     }
     
 
