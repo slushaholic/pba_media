@@ -1,12 +1,13 @@
 import axios from "axios"
+import Router from "next/router"
 
 export default function UserPost() {
 
     const getPost = async () => {
-        const res = await axios 
-            .get("api/post");
-        return res;
+        const res = await axios.get("/api/post")
+       return res.data
     }
+    
 
     return (
         <div className="bg-gray-100">
@@ -30,7 +31,7 @@ export default function UserPost() {
             </div>
             <div className="text container">
                 <div className="text-sm p-1">
-                    {getPost}
+                    {JSON.stringify(getPost())}
 
                 </div>
                 <div className="rounded-md overflow-hidden w-full">

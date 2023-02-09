@@ -1,6 +1,7 @@
 import Post from "../../models/postModel";
 import connectDB from "../../lib/connectDB";
 import type { NextApiResponse, NextApiRequest } from "next";
+import mongoose from "mongoose";
 import axios from "axios";
 
 interface ResponseData {
@@ -21,6 +22,8 @@ export default async function handler (
     connectDB();
     const tempPost = Post.find({
         content: "Pretty Princess"
-})
+    })
+    return (await tempPost).toString
+
 
 }
