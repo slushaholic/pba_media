@@ -23,10 +23,10 @@ export default async function handler(
 
 
     await connectDB()
-    const {userid, content} = req.body
+    const {user, content} = req.body
     
     const newPost = new Post({
-        userid,
+        user,
         content
 
     })
