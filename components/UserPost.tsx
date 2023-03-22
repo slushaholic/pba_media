@@ -4,8 +4,20 @@ import Router from "next/router"
 export default function UserPost() {
 
     const getPost = async () => {
-        const res = await axios.get("/api/post")
-       return res
+        await axios
+        
+        .get("/api/post",
+        {headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          }})
+          .then (async () => {
+
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+       
     }
     
 

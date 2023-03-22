@@ -22,7 +22,7 @@ export default function LoginForm() {
     const router = useRouter()
 
     const registerUser = async () => {
-      
+      console.log("registerUser is called");
       
       const res = await axios
       
@@ -39,14 +39,13 @@ export default function LoginForm() {
         .then(async () => {
           await loginUser()
           Router.push("/")
-
         })
         .catch((error) => {
           setMessage(error)
         })
     }
     const loginUser = async () => {
-      
+      console.log("loginUser is called");
       
       event?.preventDefault()
       const res: any = await signIn("credentials", {
