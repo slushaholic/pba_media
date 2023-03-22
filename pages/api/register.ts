@@ -48,23 +48,23 @@ export default async function handler(
             .status(200)
             .json({ error: "This API call only accepts POST methods"})
     }
-    console.log("/api/register has been called")
 
     const {username, password} = req.body
     const errorMessage = await validateForm(username, password)
     if (errorMessage) {
         return res.status(400).json(errorMessage as ResponseData)
     }
-
+    //encrypts entered password as a hash string
     const hashedPassword = await bcrypt.hash(password, 12)
+    //generates a random string for the userID
     const userid = randomUUID()
+    //initializes a new user
     const newUser = new User({
         userid,
         username,
         hashedPassword
-
     })
-    console.log("test")
+    //saves user to the database
     newUser.save().then(() => res.status(200).json({msg: "Successfuly created new user: " + newUser}))
         .catch((err: string) => res.status(400).json({ error: "Error on /api/register" + err}))
 }

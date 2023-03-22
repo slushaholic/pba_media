@@ -29,7 +29,7 @@ export default function SendPost() {
                                 const res = await axios
                                     .post(
                                         "/api/newPost",
-                                        { userid: session.user.userid, content },
+                                        { userid: session.user.user, content },
                                         {
                                             headers: {
                                                 Accept: "application/json",

@@ -25,21 +25,21 @@ export default NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
-        console.log("authorize");
+
         
         await connectDB();
     
-        // Find user with the email
+        // Find user with the entered username
         const user:any = await User.findOne({
           username: credentials?.username,
         });
 
-        // Email Not found
+        // Username Not found
         if (!user) {
           throw new Error("User is not registered");
         }
 
-        // Check hased password with DB hashed password
+        // Check hashed password with DB hashed password
         const isPasswordCorrect = await compare(
           credentials!.password,
           user.hashedPassword
@@ -49,7 +49,7 @@ export default NextAuth({
         if (!isPasswordCorrect) {
           throw new Error("Password is incorrect");
         }
-        console.log(JSON.stringify(user))
+        
         return user;
       }
     })
@@ -69,11 +69,6 @@ export default NextAuth({
     },
     async session ({ session, token, user}) {
         session.user = <DefaultSession["user"]>token.user
-        console.log(session);
-        
-        
-
-      
         return session
     }
 },

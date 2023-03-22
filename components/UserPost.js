@@ -4,7 +4,7 @@ import Router from "next/router"
 export default function UserPost() {
 
     const getPost = async () => {
-        const res = await axios('/api/post/')
+        const res = await axios('/api/post')
        return res.content
     }
     
