@@ -17,6 +17,10 @@ const postSchema = new Schema({
     image: {
       type: String,
     },
+    date: {
+      type: String,
+      required: true
+    }
   });
   export const Post =  mongoose.models?.Post ?? mongoose.model("Post", postSchema);
   export default Post

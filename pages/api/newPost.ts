@@ -19,15 +19,16 @@ export default async function handler(
     console.log("/api/newPost has been called")
 
 
-
-
+    var currentTime = new Date()
+    var date = String(currentTime.getDate())
 
     await connectDB()
     const {user, content} = req.body
     
     const newPost = new Post({
         user,
-        content
+        content,
+        date
 
     })
     newPost.save()

@@ -11,7 +11,7 @@ interface ResponseData {
 
 export default async function handler ( 
     req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
+    res: NextApiResponse
 ) {
     if (req.method !== "GET") {
         return res
@@ -20,11 +20,18 @@ export default async function handler (
     }
 
     connectDB();
-    const tempPost:any = await Post.findOne({
+    await Post.findOne({
         user: "tommy"
-    })
-    res.send(tempPost)
-    return tempPost
+    }, function (err: Error | null, obj: any) {
+        if (err) {
+            console.error(err)
+        } else {
+            console.log(obj)
+            res.send(obj)
+        }
+    } )
+    
+    
 
 
 }

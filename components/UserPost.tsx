@@ -1,10 +1,11 @@
 import axios from "axios"
 import Router from "next/router"
+import Post from "../models/postModel"
 
 export default function UserPost() {
 
     const getPost = async () => {
-        await axios
+        var obj:Post  = await axios
         
         .get("/api/post",
         {headers: {
@@ -12,11 +13,14 @@ export default function UserPost() {
             "Content-Type": "application/json"
           }})
           .then (async () => {
-
+            
           })
           .catch((error) => {
-            console.log(error)
+            console.log("This thing has an error yo")
+            console.error(error)
           })
+
+          return obj.content
        
     }
     
@@ -27,6 +31,7 @@ export default function UserPost() {
                 <div className="pic">
                     <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                         className="h-12 rounded-full"
+                        title="image"
                     />            
                 </div>
                 <div className="Name">
@@ -49,6 +54,7 @@ export default function UserPost() {
                 <div className="rounded-md overflow-hidden w-full">
                     <img src="https://images.unsplash.com/photo-1612827788868-c8632040ab64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                         className="object-siz-down max-w-full max-h-72"
+                        title="image"
                     />
                 </div>
             </div>
