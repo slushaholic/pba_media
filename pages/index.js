@@ -5,6 +5,7 @@ import Card from '../components/Card'
 import SendPost from '../components/SendPost'
 import RecivedPost from '../components/RecivedPost'
 import UserPost from '../components/UserPost'
+import UserMessage from '../components/UserMessage'
 export default function Home() {
   return (
     <>
@@ -18,15 +19,13 @@ export default function Home() {
         </div>
         <div className='flex justify-center items-center my-5'>
           <div className='my-2 w-10/12'>
-            <Card>
-              <RecivedPost />
-            </Card>
+            <p>Your Timeline</p>
           </div>
         </div>
         <div className='flex justify-center items-center my-5'>
           <div className='my-2 w-10/12'>
             <Card>
-              <UserPost />
+              <UserMessage></UserMessage>
             </Card>
           </div>
         </div>
