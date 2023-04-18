@@ -1,5 +1,6 @@
 export default function UserPost() {
     return (
+        //Start of bounds
         <>
             <div className="bg-gray-100">
                 <div className="inline-flex">
@@ -32,7 +33,7 @@ export default function UserPost() {
                 </div>
             </div>
 
-
+{/* Start copy here */}
             <div className="bg-gray-100">
                 <div className="inline-flex">
                     <div className="pic">
@@ -67,6 +68,9 @@ export default function UserPost() {
                     </div>
                 </div>
             </div>
+            {/* End COPY here */}
+
         </>
+        // You are out of bounds don't copy out here moron
     )
 }
