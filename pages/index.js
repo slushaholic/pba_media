@@ -134,12 +134,11 @@ export default function Home() {
                 <div className='flex justify-center items-center my-5'>
                     <div className='my-2 w-10/12'>
                         <Card>
-                            {/* Start copy here */}
-                            <div className="bg-gray-100">
+                        <div className="bg-gray-100">
                                 <div className="inline-flex">
                                     <div className="pic">
                                         {/* Profile PICTRUE GOES IN THE SRC */}
-                                        <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                                        <img src="https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
                                             className="h-12 rounded-full"
                                         />
                                     </div>
@@ -157,15 +156,91 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="text container">
-                                    <div className="text-sm p-1">
+                                    <div className="text-sm p-2 mx-10">
                                         {/* Proffesional paragraph of message sent */}
-                                        Can't wait to see all the competitors at Anaheim this year!
+                                        Can't wait to see all the competitors at Anaheim this year.
                                     </div>
+
+                                    <div className='border-solid border-2 border-gray-600'></div>
                                     <div className="rounded-md overflow-hidden w-full">
                                         {/* An image if the proffessional sender sent a proffessional image */}
-                                        <img src="https://images.unsplash.com/photo-1612827788868-c8632040ab64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                            className="object-siz-down max-w-full max-h-72"
+
+                                    </div>
+                                </div>
+                                <div className='flex flex-col'>
+                                    <div className='inline-flex my-2 p-2'>
+                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-s9mb40pooaNzAaEq-TAjPLStfBmHoqCoaW1hVbmfA&usqp=CAU&ec=48665701'
+                                            className="h-12 rounded rounder-full"
                                         />
+                                        <div className='flex flex-col'>
+                                            <p className="p-4"><a className="font-semibold">Batman</a> commented</p>
+                                            <p className='mx-5'>Great Guy.</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </Card>
+                    </div>
+                </div>
+                {/* End Copy here! */}
+                <div className='flex justify-center items-center my-5'>
+                    <div className='my-2 w-10/12'>
+                        <Card>
+                            {/* Start copy here */}
+                            <div className="bg-gray-100">
+                                <div className="inline-flex">
+                                    <div className="pic">
+                                        {/* Profile PICTRUE GOES IN THE SRC */}
+                                        <img src="https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
+                                            className="h-12 rounded-full"
+                                        />
+                                    </div>
+                                    <div className="Name">
+                                        {/* The name of the profile goes  in the A tag don't change the shared a post thing */}
+                                        <p className="p-4"><a className="font-semibold">Barack Obama</a> Shared a post</p>
+                                    </div>
+                                </div>
+                                <div className="float-right inline-flex my-2">
+                                    <div className="like">
+                                        <p>Like</p>
+                                    </div>
+                                    <div className="comment mx-2">
+                                        <p>Comment</p>
+                                    </div>
+                                </div>
+                                <div className="text container">
+                                    <div className="text-sm p-2 mx-10">
+                                        {/* Proffesional paragraph of message sent */}
+                                        Let me be clear. BPA Nationals is going to be great this year. Cannot wait to compete.
+                                    </div>
+
+                                    <div className='border-solid border-2 border-gray-600'></div>
+                                    <div className="rounded-md overflow-hidden w-full">
+                                        {/* An image if the proffessional sender sent a proffessional image */}
+
+                                    </div>
+                                </div>
+                                <div className='flex flex-col'>
+                                    <div className='inline-flex my-2 p-2'>
+                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-s9mb40pooaNzAaEq-TAjPLStfBmHoqCoaW1hVbmfA&usqp=CAU&ec=48665701'
+                                            className="h-12 rounded rounder-full"
+                                        />
+                                        <div className='flex flex-col'>
+                                            <p className="p-4"><a className="font-semibold">George Bush</a> commented</p>
+                                            <p className='mx-5'>You're gonna lose.</p>
+                                        </div>
+                                    </div>
+                                    <div className='flex flex-col'>
+                                        <div className='inline-flex my-2 p-2'>
+                                            <img src='https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg'
+                                                className="h-12 rounded-full"
+                                            />
+                                            <div className='flex flex-col'>
+                                                <p className="p-4"><a className="font-semibold">Michelle Obama</a> commented</p>
+                                                <p className='mx-5'>You've got it honey.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -181,13 +256,13 @@ export default function Home() {
                                 <div className="inline-flex">
                                     <div className="pic">
                                         {/* Profile PICTRUE GOES IN THE SRC */}
-                                        <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                                        <img src="https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
                                             className="h-12 rounded-full"
                                         />
                                     </div>
                                     <div className="Name">
                                         {/* The name of the profile goes  in the A tag don't change the shared a post thing */}
-                                        <p className="p-4"><a className="font-semibold">Josh Wise</a> Shared a post</p>
+                                        <p className="p-4"><a className="font-semibold">Christopher Columbus</a> Shared a post</p>
                                     </div>
                                 </div>
                                 <div className="float-right inline-flex my-2">
@@ -199,58 +274,28 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="text container">
-                                    <div className="text-sm p-1">
+                                    <div className="text-sm p-2 mx-10">
                                         {/* Proffesional paragraph of message sent */}
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus tortor, posuere vitae erat vel, placerat volutpat turpis. Nulla sit amet dolor eget arcu dignissim auctor vel non nulla. Nunc mattis orci non dui scelerisque, eu accumsan nisl ullamcorper. Sed faucibus sem quam, at auctor lorem fermentum fringilla. Donec et leo porta, consectetur massa in, dapibus mauris. Vestibulum vitae imperdiet odio. Proin maximus dui quis odio vehicula, vitae auctor augue elementum. Orci varius natoque penatibus et magnis dis parturient montes.
+                                        I sailed the ocean blue just to compete this week. Hopefully there is a navigation competition.
                                     </div>
+
+                                    <div className='border-solid border-2 border-gray-600'></div>
                                     <div className="rounded-md overflow-hidden w-full">
                                         {/* An image if the proffessional sender sent a proffessional image */}
-                                        <img src="https://images.unsplash.com/photo-1612827788868-c8632040ab64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                            className="object-siz-down max-w-full max-h-72"
-                                        />
+
                                     </div>
                                 </div>
-                            </div>
-                        </Card>
-                    </div>
-                </div>
-                {/* End Copy here! */}
-                <div className='flex justify-center items-center my-5'>
-                    <div className='my-2 w-10/12'>
-                        <Card>
-                            {/* Start copy here */}
-                            <div className="bg-gray-100">
-                                <div className="inline-flex">
-                                    <div className="pic">
-                                        {/* Profile PICTRUE GOES IN THE SRC */}
-                                        <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                                            className="h-12 rounded-full"
+                                <div className='flex flex-col'>
+                                    <div className='inline-flex my-2 p-2'>
+                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-s9mb40pooaNzAaEq-TAjPLStfBmHoqCoaW1hVbmfA&usqp=CAU&ec=48665701'
+                                            className="h-12 rounded rounder-full"
                                         />
+                                        <div className='flex flex-col'>
+                                            <p className="p-4"><a className="font-semibold">Captain Cook</a> commented</p>
+                                            <p className='mx-5'>You don't even make the top ten list of explorers.</p>
+                                        </div>
                                     </div>
-                                    <div className="Name">
-                                        {/* The name of the profile goes  in the A tag don't change the shared a post thing */}
-                                        <p className="p-4"><a className="font-semibold">Josh Wise</a> Shared a post</p>
-                                    </div>
-                                </div>
-                                <div className="float-right inline-flex my-2">
-                                    <div className="like">
-                                        <p>Like</p>
-                                    </div>
-                                    <div className="comment mx-2">
-                                        <p>Comment</p>
-                                    </div>
-                                </div>
-                                <div className="text container">
-                                    <div className="text-sm p-1">
-                                        {/* Proffesional paragraph of message sent */}
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus tortor, posuere vitae erat vel, placerat volutpat turpis. Nulla sit amet dolor eget arcu dignissim auctor vel non nulla. Nunc mattis orci non dui scelerisque, eu accumsan nisl ullamcorper. Sed faucibus sem quam, at auctor lorem fermentum fringilla. Donec et leo porta, consectetur massa in, dapibus mauris. Vestibulum vitae imperdiet odio. Proin maximus dui quis odio vehicula, vitae auctor augue elementum. Orci varius natoque penatibus et magnis dis parturient montes.
-                                    </div>
-                                    <div className="rounded-md overflow-hidden w-full">
-                                        {/* An image if the proffessional sender sent a proffessional image */}
-                                        <img src="https://images.unsplash.com/photo-1612827788868-c8632040ab64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                            className="object-siz-down max-w-full max-h-72"
-                                        />
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </Card>
