@@ -1,3 +1,5 @@
+import Card from "./Card"
+
 export default function UserPost() {
     return (
         //Start of bounds
@@ -68,8 +70,6 @@ export default function UserPost() {
                     </div>
                 </div>
             </div>
-            {/* End COPY here */}
-
         </>
         // You are out of bounds don't copy out here moron
     )
