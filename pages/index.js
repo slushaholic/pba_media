@@ -43,14 +43,15 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="text container">
-                                    <div className="text-sm p-1">
+                                    <div className="text-sm mx-12 p-1">
                                         {/* Proffesional paragraph of message sent */}
                                         Had a great time at the conference today! Loving the California sun!
                                     </div>
-                                    <div className="rounded-md overflow-hidden w-full">
+                                    <div className='border-solid border-2 border-gray-600'></div>
+                                    <div className="rounded-md overflow-hidden w-full p-2">
                                         {/* An image if the proffessional sender sent a proffessional image */}
                                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfD_J1bYZ0EMFdPuvKf46QUWnMerHNr2_BDnr2S0H2wg&usqp=CAU&ec=48600112https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.klook.com%2Fcity%2F124-los-angeles-things-to-do%2F&psig=AOvVaw3V7OPJU0hFoysIvWAT_i-J&ust=1681919215140000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKjh7ePjs_4CFQAAAAAdAAAAABAIttps://images.unsplash.com/photo-1612827https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Mobile/City/uni4vfxknblsldmpxmxq.jpg788868-c8632040ab64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                            className="object-siz-down max-w-full max-h-72"
+                                            className="object-siz-down max-w-full max-h-72 rounded rounded-full"
                                         />
                                     </div>
                                     <div className='inline-flex my-2 p-2'>
@@ -73,7 +74,7 @@ export default function Home() {
                                 <div className="inline-flex">
                                     <div className="pic">
                                         {/* Profile PICTRUE GOES IN THE SRC */}
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCicgGzuJ5PvFUjJ5_2nkyPa5bgLeOKmOVfOWNN2ipIA&usqp=CAU&ec=48600112"
+                                        <img src="https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
                                             className="h-12 rounded-full"
                                         />
                                     </div>
@@ -91,11 +92,12 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="text container">
-                                    <div className="text-sm p-1">
+                                    <div className="text-sm p-2 mx-10">
                                         {/* Proffesional paragraph of message sent */}
-                                        <p className='mx-10 p-4'>Definetly winning the Business Competition</p>
-                                        <div className='border-solid border-2 border-gray-600'></div>
+                                        Definetly winning the Business Competition
                                     </div>
+
+                                    <div className='border-solid border-2 border-gray-600'></div>
                                     <div className="rounded-md overflow-hidden w-full">
                                         {/* An image if the proffessional sender sent a proffessional image */}
 
@@ -103,8 +105,8 @@ export default function Home() {
                                 </div>
                                 <div className='flex flex-col'>
                                     <div className='inline-flex my-2 p-2'>
-                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj0LKQb4WDl6GiyEj00Hm0PctCtOUs9fvN3BfoJhyyPg&usqp=CAU&ec=48600112'
-                                            className="h-12 rounded-full"
+                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-s9mb40pooaNzAaEq-TAjPLStfBmHoqCoaW1hVbmfA&usqp=CAU&ec=48665701'
+                                            className="h-12 rounded rounder-full"
                                         />
                                         <div className='flex flex-col'>
                                             <p className="p-4"><a className="font-semibold">Mark Zuckerburg</a> commented</p>
@@ -113,7 +115,7 @@ export default function Home() {
                                     </div>
                                     <div className='flex flex-col'>
                                         <div className='inline-flex my-2 p-2'>
-                                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj0LKQb4WDl6GiyEj00Hm0PctCtOUs9fvN3BfoJhyyPg&usqp=CAU&ec=48600112'
+                                            <img src='https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg'
                                                 className="h-12 rounded-full"
                                             />
                                             <div className='flex flex-col'>
