@@ -138,7 +138,7 @@ export default function Home() {
                                 <div className="inline-flex">
                                     <div className="pic">
                                         {/* Profile PICTRUE GOES IN THE SRC */}
-                                        <img src="https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
+                                        <img src="https://tse3.mm.bing.net/th?id=OIP.kYhL3tIVZyCw-eCgKjqzPQHaHa&pid=Api&P=0"
                                             className="h-12 rounded-full"
                                         />
                                     </div>
@@ -162,15 +162,17 @@ export default function Home() {
                                     </div>
 
                                     <div className='border-solid border-2 border-gray-600'></div>
-                                    <div className="rounded-md overflow-hidden w-full">
+                                    <div className="rounded-md overflow-hidden w-full p-2">
                                         {/* An image if the proffessional sender sent a proffessional image */}
-
+                                        <img src="https://tse2.mm.bing.net/th?id=OIP.dQgM1TFQiCi8yg3zjYeS1gHaCe&pid=Api&P=0"
+                                            className="object-siz-down max-w-full max-h-72 rounded rounded-full"
+                                        />
                                     </div>
                                 </div>
                                 <div className='flex flex-col'>
                                     <div className='inline-flex my-2 p-2'>
-                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-s9mb40pooaNzAaEq-TAjPLStfBmHoqCoaW1hVbmfA&usqp=CAU&ec=48665701'
-                                            className="h-12 rounded rounder-full"
+                                        <img src='https://tse1.mm.bing.net/th?id=OIP.Gv9ctkzP1QJKgMfEiLrmLgHaFj&pid=Api&P=0'
+                                            className="h-12 rounded rounded-full"
                                         />
                                         <div className='flex flex-col'>
                                             <p className="p-4"><a className="font-semibold">Batman</a> commented</p>
@@ -192,7 +194,7 @@ export default function Home() {
                                 <div className="inline-flex">
                                     <div className="pic">
                                         {/* Profile PICTRUE GOES IN THE SRC */}
-                                        <img src="https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
+                                        <img src="https://tse3.mm.bing.net/th?id=OIP.bgd-Pn7y6ZXhWu6c_nQqdQHaEK&pid=Api&P=0https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
                                             className="h-12 rounded-full"
                                         />
                                     </div>
@@ -223,7 +225,7 @@ export default function Home() {
                                 </div>
                                 <div className='flex flex-col'>
                                     <div className='inline-flex my-2 p-2'>
-                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-s9mb40pooaNzAaEq-TAjPLStfBmHoqCoaW1hVbmfA&usqp=CAU&ec=48665701'
+                                        <img src='https://tse2.mm.bing.net/th?id=OIP.mP_j_F57pKauxWB0JfQWkgHaJQ&pid=Api&P=0'
                                             className="h-12 rounded rounder-full"
                                         />
                                         <div className='flex flex-col'>
@@ -233,7 +235,7 @@ export default function Home() {
                                     </div>
                                     <div className='flex flex-col'>
                                         <div className='inline-flex my-2 p-2'>
-                                            <img src='https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg'
+                                            <img src='https://tse1.mm.bing.net/th?id=OIP.yNJnP3C9TNPtuvEKo7saOwHaE7&pid=Api&P=0'
                                                 className="h-12 rounded-full"
                                             />
                                             <div className='flex flex-col'>
@@ -256,7 +258,7 @@ export default function Home() {
                                 <div className="inline-flex">
                                     <div className="pic">
                                         {/* Profile PICTRUE GOES IN THE SRC */}
-                                        <img src="https://thumbs.dreamstime.com/b/jeff-bezos-jeff-bezos-th-annual-lacma-art-film-gala-presented-gucci-held-lacma-los-angeles-usa-november-234026571.jpg"
+                                        <img src="https://tse1.mm.bing.net/th?id=OIP.FBDRhoyngRf4xvFBSbFBqwHaGL&pid=Api&P=0"
                                             className="h-12 rounded-full"
                                         />
                                     </div>
@@ -287,7 +289,7 @@ export default function Home() {
                                 </div>
                                 <div className='flex flex-col'>
                                     <div className='inline-flex my-2 p-2'>
-                                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-s9mb40pooaNzAaEq-TAjPLStfBmHoqCoaW1hVbmfA&usqp=CAU&ec=48665701'
+                                        <img src='https://tse2.mm.bing.net/th?id=OIP.6eeZuqMhMSFeWeowoqefqgHaJS&pid=Api&P=0'
                                             className="h-12 rounded rounder-full"
                                         />
                                         <div className='flex flex-col'>
@@ -301,8 +303,6 @@ export default function Home() {
                         </Card>
                     </div>
                 </div>
-                {/* End Copy here! */}
-                
             </div>
         </>
     )
